@@ -65,15 +65,27 @@ function generateButtonTag() {
             if (getButtonText == tag1 || getButtonText == tag2 || getButtonText == tag3 || getButtonText == tag4 || getButtonText == tag5) {
                 document.getElementById(index + 1).style.borderColor = "#E626FF";
                 // document.getElementById(index + 1).style.borderWidth = "2px";
-                document.getElementById(index + 1).style.boxShadow = "5px 5px 25px 2px #E626FF"
+                // document.getElementById(index + 1).style.boxShadow = "5px 5px 25px 2px #E626FF"
             }
             
         }
+
     };
 
+    // var removeButton = document.createElement("button");
+    //     removeButton.innerHTML = inputTagDialogTag;
+    //     removeButton.id = "RemoveButton" + quantityOfCreatedTags;
+    //     // removeButton.onclick = function removeTag() {
+    //     //     document.getElementById("TagButton" + quantityOfCreatedTags).parentNode.removeChild(document.getElementById("TagButton" + quantityOfCreatedTags));
+    //     //     document.getElementById("RemoveButton" + quantityOfCreatedTags).parentNode.removeChild(document.getElementById("RemoveButton" + quantityOfCreatedTags));
+    //     //     quantityOfCreatedTags--;
+    //     // };
 
     var mainLeft = document.getElementById("mainLeft");
     mainLeft.appendChild(createButtonTag);
+
+    // var removeTagDialog = document.getElementById("removeTagDialog");
+    // removeTagDialog.appendChild(removeButton);
 }
 
 // var quantityOfCreatedGameButtons = 0;
@@ -125,7 +137,7 @@ function generateButtonGame() {
 
 
 
-// Logic for Show & Unshow Buttons
+// Logic for Show & Hide Buttons
 var getCreatedGames = document.getElementsByClassName("createGame");
 
 function showTags() {
@@ -137,15 +149,28 @@ function showTags() {
 function unshowTags() {
     for (let index = 0; index < quantityOfCreatedGames; index++) {
         getCreatedGames[index].classList.remove("visible");
+
     }
 }
 
 
-
+// Remove the highlight from the Games
 function removeSelection() {
     var gameDiv = document.getElementsByClassName("createGame")
     for (let index = 0; index < quantityOfCreatedGames; index++) {
         gameDiv[index].style.borderColor = "black";
         gameDiv[index].style.boxShadow = "0px 0px 0px 0px #000000"
     }
+}
+
+
+// Remove the last created TagButton
+function removeTag() {
+    document.getElementById("TagButton" + quantityOfCreatedTags).parentNode.removeChild(document.getElementById("TagButton" + quantityOfCreatedTags));
+    quantityOfCreatedTags--;
+};
+
+function removeGame() {
+    document.getElementById(quantityOfCreatedGames).parentNode.removeChild(document.getElementById(quantityOfCreatedGames));
+    quantityOfCreatedGames--;
 }
