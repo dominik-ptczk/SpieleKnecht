@@ -1,7 +1,7 @@
 * {
+    /* height: 100%; */
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    overflow: hidden;
     box-sizing: border-box;
     background-color: var(--grey);
 }
@@ -12,12 +12,62 @@
     --white: #ffffff;
 }
 
+#startDialog {
+    position: fixed;
+    width: 20vw;
+    height: 20vh;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: 2px solid black;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#startDialog h1 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#startDialog.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#startDialog button {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+}
+
+#startDialog input {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+}
+
+#startDialog div {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#startDialog label {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 67%;
+}
+
 
 #container {
     color: white;
 }
 
 #leftMenu {
+    position: fixed;
     background-color: var(--greyDarker);
     float: left;
     height: 100vh;
@@ -115,6 +165,11 @@
     pointer-events: none;
     transition-duration: 0.5s;
     border: 2px solid black;
+}
+
+#pickTagColor {
+    position: relative;
+    margin: 2%;
 }
 
 #addTagDialog h1 {
@@ -252,6 +307,7 @@
     visibility: hidden;
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: 0.1px;
 }
 
 .createGame.visible p {
