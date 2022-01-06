@@ -277,20 +277,20 @@ function removeSelection() {
 }
 
 
-// Remove the last created TagButton
-function removeTag() {
-    if (quantityofCreatedTags > 0 ) {
-    document.getElementById("TagButton" + quantityOfCreatedTags).parentNode.removeChild(document.getElementById("TagButton" + quantityOfCreatedTags));
-    quantityOfCreatedTags--;
-    }
-};
-// Remove the last created Game
-function removeGame() {
-    if (quantityOfCreatedGames > 0) {
-    document.getElementById(quantityOfCreatedGames).parentNode.removeChild(document.getElementById(quantityOfCreatedGames));
-    quantityOfCreatedGames--;
-    }
-}
+// // Remove the last created TagButton
+// function removeTag() {
+//     if (quantityofCreatedTags > 0 ) {
+//     document.getElementById("TagButton" + quantityOfCreatedTags).parentNode.removeChild(document.getElementById("TagButton" + quantityOfCreatedTags));
+//     quantityOfCreatedTags--;
+//     }
+// };
+// // Remove the last created Game
+// function removeGame() {
+//     if (quantityOfCreatedGames > 0) {
+//     document.getElementById(quantityOfCreatedGames).parentNode.removeChild(document.getElementById(quantityOfCreatedGames));
+//     quantityOfCreatedGames--;
+//     }
+// }
 
 
 // Save in localStorage
@@ -307,8 +307,6 @@ function deleteLocalStorage() {
     localStorage.clear();
     window.location.reload()
 }
-
-
 
 
 

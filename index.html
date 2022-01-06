@@ -11,18 +11,18 @@
             <div id="leftMenu">
                 <h1>Menu</h1>
                 <button id="btnAddTag" class="btn" onclick="openDialog('addTagDialog')">Add tag</button>
-                <button id="removeTagButton" class="btn" onclick="removeTag()">Remove the latest tag (Buggy)</button>
+                <!-- <button id="removeTagButton" class="btn" onclick="removeTag()">Remove the latest tag (Buggy)</button> -->
                 <button id="btnAddGame" class="btn" onclick="openDialog('addGameDialog')">Add game</button>
-                <button id="removeGameButton" class="btn" onclick="removeGame()">Remove the latest game (Buggy)</button>
+                <!-- <button id="removeGameButton" class="btn" onclick="removeGame()">Remove the latest game (Buggy)</button> -->
                 <button id="removeSelection" class="btn" onclick="removeSelection()">Remove selection</button>
                 <!-- <button id="save" class="btn" onclick="save()">Save (no function)</button> -->
                 <button id="deleteLocalStorage" class="btn" onclick="deleteLocalStorage()">Reset Site</button>
                 <div id="showTagButtons">
-                    <button id="showTags" class="btn" onclick="showTags()">Show Tags</button>
-                    <button id="unshowTags" class="btn" onclick="unshowTags()">Hide Tags</button>
+                    <!-- <button id="showTags" class="btn" onclick="showTags()">Show Tags</button> -->
+                    <!-- <button id="unshowTags" class="btn" onclick="unshowTags()">Hide Tags</button> -->
                 </div>
                 <div id="version">
-                    <p>Spiele Knecht v0.3</p>
+                    <p>Spiele Knecht v0.4</p>
                 </div>
             </div>
             <div id="mainLeft">
@@ -56,7 +56,7 @@
             <input type="text" class="textInputDialogGame" id="inputGameTag3" placeholder="Tag 3">
             <input type="text" class="textInputDialogGame" id="inputGameTag4" placeholder="Tag 4">
             <input type="text" class="textInputDialogGame" id="inputGameTag5" placeholder="Tag 5">
-            <input type="submit" class="submitButton" value="Add Game" id="submitButtonDialogGame" onclick="getAddGameData(), generateButtonGame()">
+            <p><input type="submit" class="submitButton" value="Add Game" id="submitButtonDialogGame" onclick="getAddGameData(), generateButtonGame()"></p>
         </div>
         
         <script src="main.js" defer></script>
